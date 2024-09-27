@@ -1,0 +1,20 @@
+{
+    "monedas": [
+      {
+        "id": "dolar",
+        "nombre": "Dólares",
+        "tasa": 1000
+      },
+      {
+        "id": "euro",
+        "nombre": "Euros",
+        "tasa": 1110
+      },
+      {
+        "id": "libra",
+        "nombre": "Libras Esterlinas",
+        "tasa": 1300
+      }
+    ]
+  }
+  

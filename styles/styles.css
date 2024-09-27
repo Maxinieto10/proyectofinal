@@ -1,0 +1,159 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004d40;
+    color: white;
+    padding: 15px;
+}
+
+.header-left {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-right {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 60px; /* Espacio antes del footer */
+}
+
+/* Títulos */
+h1, h2 {
+    color: #004d40;
+}
+
+/* Estilos de las tarjetas de monedas */
+#cards-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 250px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Placeholder para input */
+input::placeholder {
+    color: #aaa;
+}
+
+/* Estilos para botones */
+button {
+    background-color: #004d40;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00695c;
+}
+
+/* Estilos del carrito de compras */
+#cart-container {
+    margin-top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Total acumulado */
+#total {
+    font-size: 20px;
+    color: #004d40;
+    margin-top: 20px;
+}
+
+/* Estilos de la ventana emergente */
+#popup, #confirm-popup, #success-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid #004d40;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-align: center;
+}
+
+#popup button, #confirm-popup button, #success-popup button {
+    margin-top: 10px;
+    background-color: #004d40;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#popup button:hover, #confirm-popup button:hover, #success-popup button:hover {
+    background-color: #00695c;
+}
+
+/* Sombra de fondo al activar el popup */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
