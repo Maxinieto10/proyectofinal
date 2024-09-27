@@ -1,11 +1,9 @@
-// Datos de las monedas simuladas
 const monedas = [
     { nombre: 'dolar', simbolo: 'USD' },
     { nombre: 'euro', simbolo: 'EUR' },
     { nombre: 'libra', simbolo: 'GBP' }
 ];
 
-// Función para crear las tarjetas de monedas
 function crearTarjetas() {
     const container = document.getElementById('cards-container');
     
@@ -21,5 +19,4 @@ function crearTarjetas() {
     });
 }
 
-// Inicializar la creación de las tarjetas
 crearTarjetas();

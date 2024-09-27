@@ -1,4 +1,3 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -7,7 +6,6 @@ body {
     padding: 0;
 }
 
-/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -27,7 +25,6 @@ header {
     cursor: pointer;
 }
 
-/* Footer */
 footer {
     background-color: #000;
     color: white;
@@ -38,7 +35,6 @@ footer {
     width: 100%;
 }
 
-/* Contenedor principal */
 .container {
     width: 90%;
     margin: 0 auto;
@@ -46,12 +42,10 @@ footer {
     margin-bottom: 60px; /* Espacio antes del footer */
 }
 
-/* Títulos */
 h1, h2 {
     color: #004d40;
 }
 
-/* Estilos de las tarjetas de monedas */
 #cards-container {
     display: flex;
     justify-content: space-around;
@@ -76,12 +70,10 @@ h1, h2 {
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* Placeholder para input */
 input::placeholder {
     color: #aaa;
 }
 
-/* Estilos para botones */
 button {
     background-color: #004d40;
     color: white;
@@ -96,7 +88,6 @@ button:hover {
     background-color: #00695c;
 }
 
-/* Estilos del carrito de compras */
 #cart-container {
     margin-top: 20px;
 }
@@ -110,14 +101,12 @@ button:hover {
     border: 1px solid #ccc;
 }
 
-/* Total acumulado */
 #total {
     font-size: 20px;
     color: #004d40;
     margin-top: 20px;
 }
 
-/* Estilos de la ventana emergente */
 #popup, #confirm-popup, #success-popup {
     display: none;
     position: fixed;
@@ -146,7 +135,6 @@ button:hover {
     background-color: #00695c;
 }
 
-/* Sombra de fondo al activar el popup */
 #overlay {
     display: none;
     position: fixed;

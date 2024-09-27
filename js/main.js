@@ -1,14 +1,11 @@
-// Simulación de conversión de monedas
 const rates = {
     dolar: 1000,
     euro: 1110,
     libra: 1300
 };
 
-// Array para almacenar el carrito de compras
 let carrito = [];
 
-// Función para hacer la conversión
 function convertirMoneda(moneda, cantidad) {
     try {
         if (cantidad <= 0 || isNaN(cantidad)) {
@@ -21,7 +18,6 @@ function convertirMoneda(moneda, cantidad) {
     }
 }
 
-// Función para agregar elementos al carrito
 function agregarAlCarrito(moneda, cantidad) {
     const conversion = convertirMoneda(moneda, cantidad);
     if (conversion) {
@@ -35,22 +31,18 @@ function agregarAlCarrito(moneda, cantidad) {
     }
 }
 
-// Función para eliminar un item del carrito
 function eliminarDelCarrito(index) {
     carrito.splice(index, 1);
     actualizarCarrito();
 }
 
-// Función para actualizar el carrito y mostrar el total
 function actualizarCarrito() {
     const cartContainer = document.getElementById('cart-container');
-    cartContainer.innerHTML = '';  // Limpiar el carrito
+    cartContainer.innerHTML = '';  
 
-    // Si no hay productos en el carrito, mostramos un mensaje
     if (carrito.length === 0) {
         cartContainer.innerHTML = '<p>El carrito está vacío.</p>';
     } else {
-        // Si hay productos, los mostramos
         carrito.forEach((item, index) => {
             const div = document.createElement('div');
             div.className = 'cart-item';
@@ -61,12 +53,10 @@ function actualizarCarrito() {
             cartContainer.appendChild(div);
         });
 
-        // Mostrar el total acumulado
         const total = carrito.reduce((sum, item) => sum + item.total, 0);
         document.getElementById('total').textContent = `Total a pagar: $${total}`;
     }
 
-    // Verificamos si el botón de finalizar compra ya está, si no, lo creamos
     if (!document.getElementById('finalizar-compra')) {
         const finalizarCompraBtn = document.createElement('button');
         finalizarCompraBtn.id = 'finalizar-compra';
@@ -76,7 +66,6 @@ function actualizarCarrito() {
     }
 }
 
-// Función para mostrar el popup de error
 function mostrarPopup(mensaje) {
     const popup = document.getElementById('popup');
     const overlay = document.getElementById('overlay');
@@ -86,7 +75,6 @@ function mostrarPopup(mensaje) {
     overlay.style.display = 'block';
 }
 
-// Función para cerrar el popup
 function cerrarPopup() {
     const popup = document.getElementById('popup');
     const overlay = document.getElementById('overlay');
@@ -95,7 +83,6 @@ function cerrarPopup() {
     overlay.style.display = 'none';
 }
 
-// Función para mostrar la ventana de confirmación de compra
 function mostrarConfirmacion() {
     const confirmPopup = document.getElementById('confirm-popup');
     const overlay = document.getElementById('overlay');
@@ -104,7 +91,6 @@ function mostrarConfirmacion() {
     overlay.style.display = 'block';
 }
 
-// Función para cerrar la ventana de confirmación de compra
 function cerrarConfirmacion() {
     const confirmPopup = document.getElementById('confirm-popup');
     const overlay = document.getElementById('overlay');
@@ -113,7 +99,6 @@ function cerrarConfirmacion() {
     overlay.style.display = 'none';
 }
 
-// Función para confirmar la compra
 function confirmarCompra() {
     const successPopup = document.getElementById('success-popup');
     const overlay = document.getElementById('overlay');
@@ -121,9 +106,9 @@ function confirmarCompra() {
     successPopup.style.display = 'block';
     overlay.style.display = 'block';
 
-    carrito = [];  // Vaciar el carrito después de la compra
+    carrito = [];  
     actualizarCarrito();
-    cerrarConfirmacion();  // Cerrar la ventana de confirmación
+    cerrarConfirmacion(); 
 }
 
 
